@@ -1,0 +1,423 @@
+SPACE DILEMMA - Project by Group 3 - PSEUDO CODE
+
+Enter user details (name)
+
+Randomize initial values
+
+Choose game scenario
+  - Scenario 1 - Oxygen System Failure      ----- THIS SOLUTION ----
+  - Scenario 2 - Navigation Failure         ----- FUTURE USE - IF WE HAVE TIME ---- 
+  - Scenario 3 - Crew injury / deceased     ----- FUTURE USE - IF WE HAVE TIME ----
+
+if scenario 1 - Oxygen Failure chosen .... 
+  - Display story / challenge overview
+
+	Start - Game Intro .... scroll text and overview
+
+	Welcome to SPACE DILEMMA ... 
+
+	You are a pilot of a small shuttle craft in the Dragon Blue Watch group of Space fleet 12
+
+	There has been a distress / warning beacon message received from a clipper cargo ship in your fleet
+
+	You are the nearest to the stricken ship and you have been choosen by the mothership to investigate 
+
+	You shortly arrive at the stricken space ship and board it to investigate the problem 
+
+	There are 4 crew and an android aboard the clipper ship
+
+	There is a report of an oxygen failure on board, they say that there is approx. 1 hour oxygen left 
+        and it's critical that this is fixed 
+
+	You have room aboard your ship for yourself and (X) passengers (randomised)
+
+	The nearest other rescue ship is (X hours) away (randomised)
+
+	There may be issues with the communications (randomised)
+
+	There may be problems with the Oxygen system ... (randomised)
+
+	They urgently ask for your help ...
+
+	Negative actions and bad decisions you make may have an negative impact on your health and the crew's health
+
+	Positive actions and good decisions you make may have an positive impact on your health and the crew's health
+
+	If you or the crew members health reaches zero then you (or they) will die
+
+	Success is measured by saving as many crew members (as well as yourself) as possible!
+
+	Failure is not an option! ....
+
+
+  - Rules
+  - Good choices increase user / team health %
+  - Bad choices decrease user / team health %
+  - You / team members cannot be greater than 100% health
+  - if health % drops to 0 then that person dies
+  - Current health status displayed every 5 goes, or when health drops to 10% or under  
+  - Save as many of the crew (and yourself) as you can ...
+
+  - Set initial and randomised parameters ... 
+	- set crew ship oxygen % level (1 hour)
+  	- set 4 crew & android name  
+		- Jack - Pilot 
+		- Paul - Comms
+		- Jane - Doctor
+		- Sue  - Mechanic
+		- Zed  - Andriod
+  	- set crew and android's health - each randomized (50-100%)
+  	- set user health % (100%)
+  	- set your ship details - randomize
+		- 1 seater                         (just yourself)
+		- 2 seater                         (1 extra passenger)
+		- 3 seater                         (2 extra passengers)
+  	- set communication status - randomize 
+		- Full comms
+		- damaged / partial comms INTERIOR (fix requires comms card)  
+		- damaged / partial comms EXTERIOR (fix requires spanners)
+		- No comms                         (fix requires Comms card AND spanners)
+		- tool / repair fix required       (randomised)
+  	- set toolbox status
+		- full toolbox                     (contains all tools)
+  	- set damage level oxygen supply  - randomize
+		- total fail                       (fix requires hose / sealant AND Welding gun)
+		- internal damage - maybe fixable  (fix requires hose / sealant)
+		- external damage - maybe fixable  (fix requires Welding Gun)
+                - tool / repair fix required       (randomised)
+  	- set distance to mothership
+		- 120mins / 2 hours
+
+  - You enter ship and games starts ...
+
+  - Display player names / current health status
+
+  - Choice 
+    - 1 Check Crew / User status
+    - 2 Check Oxygen machine / status
+    - 3 Check Comms status
+    - 4 Check Mothership Status
+    - 5 Your Ship Status
+
+AFTER EACH CHOICE
+    - perform the function required
+    - update status based on the current random features
+    	- if bad choice lessen health / increase damage
+		- if anyone dead say so
+		- if all dead goto end game
+    	- if good choice improve health / decrease damage
+		- if problem fixed goto end game 
+	- Else 
+		- update user with text of current situation
+		- prompt for next choice
+
+
+*** FUNCTIONS called by program ***
+Start game processing
+	- Display intro / back story 
+
+Display Crew / user status
+	- user - player
+	- Jack - Pilot 
+	- Paul - Comms
+	- Jane - Doctor
+	- Sue  - Mechanic
+	- Zed  - Android
+
+Display Oxygen status
+	- Oxygen % left in minutes
+	- Oxygen % damage internal          (hose/sealant required)
+	- Oxygen % damage external          (welding required)
+	- Oxygen fix tool / repair required (welding / hose & sealant)
+
+Display Comms status
+	- comms status
+	- comms % damage internal	   (comms card required)
+	- comms % damage external          (spanner required)  
+	- comms fix tool / repair required (spanner / comms card)
+
+Display Mothership status
+	- mothership distance (120 mins)
+	- Jack the Pilot needed to drive ship towards mothership otherwise ship stationery
+
+Display Your Ship status
+	- seat capacity
+	- full toolkit
+
+End game processing
+	- If user alive then game won 
+		- bonus for every team member saved
+		- bonus if crew ship saved
+	- If user dead then game lost 	
+	- Roll end credits ... 
+
+
+
+
+
+
+*******************************************************
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Scenario 1: - FIX FOR OXYGEN MACHINE INTERNAL
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+Scenario 1: - FIX FOR OXYGEN MACHINE INTERNAL
+
+You check the status of the OXYGEN panel
+
+The Oxygen readings are lower than normal ... you investigate further ...
+
+There seems to be a strange noise coming from the machine.
+
+What do you do?
+
+1) Turn machine Oxygen machine off and back on again
+2) Open Toolbox
+3) Kick the oxygen machine to see if that fixes it
+4) Open front panel
+
+You select Option 4 : Open front panel
+
+There seems to be a noise comming from inside... you move things around and discover that some of the components and fittings are a bit loose... 
+
+What do you do?
+
+1) Check each component to ensure that it is secured correctly 
+2) Assume that it's only vibration noise and it doesn't matter
+3) Open toolbox
+4) Tie the panel door shut to decrease the noise
+
+What do you do ? .....
+
+You select Option 3 : Open Toolbox
+
+You open the toolbox and look inside ... there are several tools they may help ...
+
+1) Select hose pipe
+2) Select Welder
+3) Select comms card
+4) Select spanner
+
+What do you do ? .....
+
+You select Option 4: Select HOSE PIPE
+
+You select the hose pipe from the toolbox. You then switch off the oxygen machine and disconnect the old hose pipe ... you notice that 
+it is full of hols and is coming apart. 
+
+You securely replace the old hose pipe with the new one and re-start the oxygen machine.
+
+The Oxygen machine bursts into life and the oxygen levels start to rise dramatically ... you have solved this problem!!!!  
+
+(goto subroutine and increase OXYGEN health by 25%)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Scenario 2: - FIX FOR OXYGEN MACHINE EXTERNAL
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+Scenario 2: - FIX FOR OXYGEN MACHINE EXTERNAL
+
+You check the status of the OXYGEN panel
+
+The oxygen panel has now burst into life and is working at an increased rate ... but NOT at 100% ... something is still wrong
+
+What do you do ? .....
+
+1) Decided to check outside
+2) Open Toolbox
+3) Check on crew
+4) Call for help
+
+You select Option 1 : Decide to check outside
+
+As you've done all you can internally youe determine that there must be a problem externally.
+
+You decide to take a space walk to investigate further ... 
+
+You notice that there is damage to the ship hull .. probably from some space debris ... and there is a find spray of gas leaking out from the ship ... oxygen is escaping!
+
+What do you do ? .....
+
+1) Push some rags into the hole to try to seal it
+2) Go back inside ship for help
+3) Open toolbox
+4) Call it a day
+
+You select Option 3 : Open Toolbox
+
+You open the toolbox and loook inside ... there are several tools they may help ...
+
+What do you do?
+
+1) Select hose pipe
+2) Select Welder
+3) Select comms card
+4) Select spanner
+
+You select Option 2: Select WELDER
+
+You use the welder to seal a steel plate over the damaged area of the ships hull. The fix looks good ... 
+
+You then re-enter the ship and go to Oxygen panel to test the system.
+
+You switch on the Oxygen machine and it crackles into life - the oxygen pressure is nice and strong!!!! ... you have solved this problem!!!! 
+
+(goto subroutine and increase OXYGEN health by 25%)
+
+NOTE ::: WHEN BOTH OXYGEN PROBLEMS SOLVED OXYGEN RETURNS TO 100%
+NOTE ::: WHEN BOTH OXYGEN PROBLEMS SOLVED OXYGEN RETURNS TO 100%
+NOTE ::: WHEN BOTH OXYGEN PROBLEMS SOLVED OXYGEN RETURNS TO 100%
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Scenario 3: - FIX FOR COMMS MACHINE INTERNAL
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Scenario 3: - FIX FOR COMMS MACHINE INTERNAL
+You hear an alarm coming from down the corrridor. You go to investigate ... 
+Entering the COMMS ROOM you see smoke coming from the COMMS panel
+What do you do ? .....
+
+1) Throw water on comms panel
+2) Open comms panel
+3) Run away!
+4) Call for help
+
+You select Option 2 : Open comms panel
+
+You see the comms card has over heated and is starting to give off a burning smell ....
+You remove the turn-off the comms machine to prevent a fire. The comms card looks beyond repair. 
+
+What do you do ? .....
+
+1) Leave room and join others
+2) Pour water on comms card
+3) Open Toolbox
+4) Call for help
+
+You select Option 3 : Open Tool box
+
+You open the toolbox and loook inside ... there are several tools they may help ...
+
+What do you do?
+
+1) Select hose pipe
+2) Select Welder
+3) Select comms card
+4) Select spanner
+
+You select Option 3: Select COMMS CARD
+
+You turn off the comms server, you then remove the old comms card and
+replace it with the new comms card. You switch on the comms machine 
+and it crackles into life !!!! ... you have solved this problem!!!!
+(goto subroutine and increase COMMS health by 25%)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Scenario 4: - FIX FOR COMMS MACHINE EXTERNAL
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+Scenario 4: - FIX FOR COMMS MACHINE EXTERNAL
+
+You check the status of the COMMS panel
+
+Everything semes to be working and intact ... but the radio signal is very low .... you decide there must be a problem with the sattelite reciever outsidee the ship.
+
+You put on your space suit and go for a space walk outside the ship to investigate further.
+
+You notice that the satelite dish has come loose fromit's mooring and is hanging off loose.
+
+What do you do ? .....
+
+1) Open toolbox
+2) Push it back into place and hope
+3) Go back inside ship for help
+4) Call it a day
+
+You select Option 1 : Open Toolbox
+
+You open the toolbox and loook inside ... there are several tools they may help ...
+
+What do you do?
+
+1) Select hose pipe
+2) Select Welder
+3) Select comms card
+4) Select spanner
+
+You select Option 4: Select SPANNER
+
+You push the satellite dish back into alighnment and use the spanner to tighen up the bolts to securely fix it into place.
+
+You then re-enter the shipand go to comms panel to test the sysytem.
+
+You switch on the comms machine and it crackles into life - the signal is nice and strong!!!! ... you have solved this problem!!!! 
+(goto subroutine and increase COMMS health by 25%)
+
+NOTE ::: WHEN BOTH COMMS PROBLEMS SOLVED COMMS RETURNS TO 100%
+AND ZED CALLS MOTHERSHIP FOR HELP
+
+*********************************************
+
+*********************************************
+
+def scenario_1():
+#	Here is where we deal with scenario 1
+	display intro text for problem
+
+        setup options
+        display options
+        get user input
+
+        if bad_choice call general_error(scenario_1)
+		repeat same 4 options to user
+	        display options
+	        get user input
+        
+	Else good_choice
+		display intro text for problem
+	        setup options
+        	display options
+        	get user input
+
+	        if bad_choice call general_error(scenario_1)
+			repeat same 4 options to user
+	        	display options
+	        	get user input
+		Else good_choice
+			display intro text for problem
+	        	setup options
+        		display options
+        		get user input
+
+		        if bad_choice call general_error(scenario_1)
+				repeat same 4 options to user
+	        		display options
+	        		get user input
+			Else good_choice
+				display Hooray!! problem fixed
+				Scenario fixed
+
+*************************
+T0-DO
+*************************
+Code Scenarios 1-4
+
+Code general_error(scenario_name)
+
+Sound bites
+
+Intro text display ... text size / colour
+
+Exit Credits display ...  text size / colour
+
+Spell check / Grammar 
+
+Run / Test / Debug to death!!!!
+		      
+pseudo code updated 
+
+flowchart updated
+
+trello updated
+
+
